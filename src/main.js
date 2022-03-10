@@ -1,4 +1,13 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
 
-createApp(App).mount('#app')
+import { Inkline, components } from '@inkline/inkline';
+import '@inkline/inkline/inkline.scss';
+
+const app = createApp(App);
+
+app.use(Inkline, {
+    components
+});
+    
+app.mount('#app');
